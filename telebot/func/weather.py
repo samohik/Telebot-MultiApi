@@ -13,11 +13,13 @@ def get_temperature_in_city(city: str):
 
     # print the temperature in Celsius and status
     city = observation.location.name
-    temperature = weather.temperature('celsius')['temp']
+    temperature = weather.temperature("celsius")["temp"]
     status = weather.detailed_status
-    result = "Temperature in {}: {} celsius\nWeather status: {}".format(city, temperature, status)
+    result = "Temperature in {}: {} celsius\nWeather status: {}".format(
+        city, temperature, status
+    )
     return result
 
 
-if __name__ == '__main__':
-    print(get_temperature_in_city('New York'))
+if __name__ == "__main__":
+    print(get_temperature_in_city("New York"))
